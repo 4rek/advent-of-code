@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"regexp"
 	"sort"
 	"strconv"
@@ -28,8 +27,6 @@ func partOne(lines []string) int {
 		num, _ := strconv.Atoi(localResults[0].value + localResults[len(localResults)-1].value)
 		results = append(results, num)
 	}
-
-	fmt.Println(results)
 
 	var sum int = 0
 
@@ -79,8 +76,6 @@ func partTwo(lines []string) int {
 		num, _ := strconv.Atoi(localResults[0].value + localResults[len(localResults)-1].value)
 		results = append(results, num)
 	}
-
-	fmt.Println(results)
 
 	var sum int = 0
 

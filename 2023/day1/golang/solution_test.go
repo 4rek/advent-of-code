@@ -7,13 +7,13 @@ import (
 )
 
 func TestPartOne(t *testing.T) {
-	demoData, err := os.ReadFile("inputs/demo1.txt")
+	demoData, err := os.ReadFile("../inputs/demo1.txt")
 
 	if err != nil {
 		panic(err)
 	}
 
-	mainData, err := os.ReadFile("inputs/main.txt")
+	mainData, err := os.ReadFile("../inputs/main.txt")
 
 	if err != nil {
 		panic(err)
@@ -38,13 +38,13 @@ func TestPartOne(t *testing.T) {
 }
 
 func TestPartTwo(t *testing.T) {
-	demoData, err := os.ReadFile("inputs/demo2.txt")
+	demoData, err := os.ReadFile("../inputs/demo2.txt")
 
 	if err != nil {
 		panic(err)
 	}
 
-	mainData, err := os.ReadFile("inputs/main.txt")
+	mainData, err := os.ReadFile("../inputs/main.txt")
 
 	if err != nil {
 		panic(err)
