@@ -1,7 +1,9 @@
+from typing import List
+
 import re
 from operator import itemgetter
 
-def part1(lines):
+def part1(lines: List[str]):
     result = []
     for line in lines:
         first = ""
@@ -22,7 +24,7 @@ def part1(lines):
 
     return sum
 
-def part2(lines):
+def part2(lines: List[str]):
     dict = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9}
     result = []
 

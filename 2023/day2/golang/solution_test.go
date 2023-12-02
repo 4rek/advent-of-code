@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-var day string = "Day 1 "
+var day string = "Day 2 "
 
 func TestPartOne(t *testing.T) {
 	demoData, err := os.ReadFile("../inputs/demo1.txt")
@@ -27,14 +27,14 @@ func TestPartOne(t *testing.T) {
 	t.Run(day+"Runs with demo input", func(t *testing.T) {
 		ans := partOne(demoLines)
 
-		if ans != 142 {
-			t.Errorf("got %d, want %d", ans, 142)
+		if ans != 8 {
+			t.Errorf("got %d, want %d", ans, 8)
 		}
 	})
 	t.Run(day+"Runs with main input", func(t *testing.T) {
 		ans := partOne(mainLines)
-		if ans != 54304 {
-			t.Errorf("got %d, want %d", ans, 54304)
+		if ans != 2076 {
+			t.Errorf("got %d, want %d", ans, 2076)
 		}
 	})
 }
@@ -58,14 +58,14 @@ func TestPartTwo(t *testing.T) {
 	t.Run(day+"Runs with demo input", func(t *testing.T) {
 		ans := partTwo(demoLines)
 
-		if ans != 281 {
-			t.Errorf("got %d, want %d", ans, 281)
+		if ans != 2286 {
+			t.Errorf("got %d, want %d", ans, 2286)
 		}
 	})
 	t.Run(day+"Runs with main input", func(t *testing.T) {
 		ans := partTwo(mainLines)
-		if ans != 54418 {
-			t.Errorf("got %d, want %d", ans, 54418)
+		if ans != 70950 {
+			t.Errorf("got %d, want %d", ans, 70950)
 		}
 	})
 }
