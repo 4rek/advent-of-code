@@ -1,5 +1,5 @@
-pytest:
-	pytest -v
+python.test:
+	pytest
 
-gotest:
-	go test -v ./...
+go.test:
+	go test ./...
