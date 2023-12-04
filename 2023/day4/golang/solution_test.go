@@ -1,22 +1,22 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"strings"
 	"testing"
+	"time"
 )
 
-var day string = "Day 4 "
+func TestDay4(t *testing.T) {
+	answers := []int{13, 24175, 30, 18846301}
 
-func TestPartOne(t *testing.T) {
+	t1 := time.Now()
 	demoData, err := os.ReadFile("../inputs/demo1.txt")
-
 	if err != nil {
 		panic(err)
 	}
-
 	mainData, err := os.ReadFile("../inputs/main.txt")
-
 	if err != nil {
 		panic(err)
 	}
@@ -24,48 +24,38 @@ func TestPartOne(t *testing.T) {
 	demoLines := strings.Split(string(demoData), "\n")
 	mainLines := strings.Split(string(mainData), "\n")
 
-	t.Run(day+"Runs with demo input", func(t *testing.T) {
+	fmt.Println("Time to read files: ", time.Since(t1))
+
+	t.Run("Part one - demo input", func(t *testing.T) {
+		tt := time.Now()
 		ans := partOne(demoLines)
-
-		if ans != 13 {
-			t.Errorf("got %d, want %d", ans, 13)
+		fmt.Println("Time to run: ", time.Since(tt))
+		if ans != answers[0] {
+			t.Errorf("got %d, want %d", ans, answers[0])
 		}
 	})
-	t.Run(day+"Runs with main input", func(t *testing.T) {
+	t.Run("Part one - main input", func(t *testing.T) {
+		tt := time.Now()
 		ans := partOne(mainLines)
-		if ans != 24175 {
-			t.Errorf("got %d, want %d", ans, 24175)
+		fmt.Println("Time to run: ", time.Since(tt))
+		if ans != answers[1] {
+			t.Errorf("got %d, want %d", ans, answers[1])
 		}
 	})
-}
-
-func TestPartTwo(t *testing.T) {
-	demoData, err := os.ReadFile("../inputs/demo2.txt")
-
-	if err != nil {
-		panic(err)
-	}
-
-	mainData, err := os.ReadFile("../inputs/main.txt")
-
-	if err != nil {
-		panic(err)
-	}
-
-	demoLines := strings.Split(string(demoData), "\n")
-	mainLines := strings.Split(string(mainData), "\n")
-
-	t.Run(day+"Runs with demo input", func(t *testing.T) {
+	t.Run("Part two - demo input", func(t *testing.T) {
+		tt := time.Now()
 		ans := partTwo(demoLines)
-
-		if ans != 30 {
-			t.Errorf("got %d, want %d", ans, 30)
+		fmt.Println("Time to run: ", time.Since(tt))
+		if ans != answers[2] {
+			t.Errorf("got %d, want %d", ans, answers[2])
 		}
 	})
-	t.Run(day+"Runs with main input", func(t *testing.T) {
+	t.Run("Part two - main input", func(t *testing.T) {
+		tt := time.Now()
 		ans := partTwo(mainLines)
-		if ans != 18846301 {
-			t.Errorf("got %d, want %d", ans, 18846301)
+		fmt.Println("Time to run: ", time.Since(tt))
+		if ans != answers[3] {
+			t.Errorf("got %d, want %d", ans, answers[3])
 		}
 	})
 }

@@ -1,5 +1,5 @@
 python.test:
-	pytest
+	pytest --durations=1 -vv
 
 go.test:
-	go test ./...
+	go test -v ./...

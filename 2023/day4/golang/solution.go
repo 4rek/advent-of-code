@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"sort"
 	"strings"
-	"time"
 
 	"golang.org/x/exp/slices"
 )
@@ -45,7 +43,6 @@ type Cart struct {
 }
 
 func partTwo(lines []string) int {
-	startTime := time.Now()
 	d := make(map[int]Cart, len(lines))
 
 	for i := range lines {
@@ -93,7 +90,5 @@ func partTwo(lines []string) int {
 		sum += d[k].Count
 	}
 
-	duration := time.Since(startTime)
-	fmt.Println("time taken: ", duration)
 	return sum
 }
