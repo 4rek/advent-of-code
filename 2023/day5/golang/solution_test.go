@@ -3,12 +3,11 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
 	"testing"
 	"time"
 )
 
-func TestDay4(t *testing.T) {
+func TestDay5(t *testing.T) {
 	answers := []int{13, 24175, 30, 18846301}
 
 	t1 := time.Now()
@@ -21,14 +20,11 @@ func TestDay4(t *testing.T) {
 		panic(err)
 	}
 
-	demoLines := strings.Split(string(demoData), "\n")
-	mainLines := strings.Split(string(mainData), "\n")
-
 	fmt.Println("Time to read files: ", time.Since(t1))
 
 	t.Run("Part one - demo input", func(t *testing.T) {
 		tt := time.Now()
-		ans := partOne(demoLines)
+		ans := partOne(string(demoData))
 		fmt.Println("Time to run: ", time.Since(tt))
 		if ans != answers[0] {
 			t.Errorf("got %d, want %d", ans, answers[0])
@@ -36,7 +32,7 @@ func TestDay4(t *testing.T) {
 	})
 	t.Run("Part one - main input", func(t *testing.T) {
 		tt := time.Now()
-		ans := partOne(mainLines)
+		ans := partOne(string(mainData))
 		fmt.Println("Time to run: ", time.Since(tt))
 		if ans != answers[1] {
 			t.Errorf("got %d, want %d", ans, answers[1])
@@ -44,7 +40,7 @@ func TestDay4(t *testing.T) {
 	})
 	t.Run("Part two - demo input", func(t *testing.T) {
 		tt := time.Now()
-		ans := partTwo(demoLines)
+		ans := partTwo(string(demoData))
 		fmt.Println("Time to run: ", time.Since(tt))
 		if ans != answers[2] {
 			t.Errorf("got %d, want %d", ans, answers[2])
@@ -52,7 +48,7 @@ func TestDay4(t *testing.T) {
 	})
 	t.Run("Part two - main input", func(t *testing.T) {
 		tt := time.Now()
-		ans := partTwo(mainLines)
+		ans := partTwo(string(mainData))
 		fmt.Println("Time to run: ", time.Since(tt))
 		if ans != answers[3] {
 			t.Errorf("got %d, want %d", ans, answers[3])
