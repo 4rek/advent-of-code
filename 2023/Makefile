@@ -1,2 +1,2 @@
-py.test:
+test:
 	pytest --durations=1 -vv

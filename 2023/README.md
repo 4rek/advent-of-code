@@ -6,5 +6,5 @@
 
 ```bash
 cd 2023
-make python.test # Running tests for solutions in Python 
+make test # Running tests for solutions in Python 
 ```
