@@ -15,11 +15,7 @@ def part1(lines: List[str]):
 
 def part2(lines: List[str]):
     r = "".join(lines).split("do()")
-    z = ""
-    
-    for i in r:
-        z += i.split("don't()")[0]
-
+    z = "".join(i.split("don't()")[0] for i in r)
     return calculate(z)
 
 

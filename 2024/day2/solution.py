@@ -44,16 +44,16 @@ def is_safe(reports: List[int]) -> bool:
     for idx, report in enumerate(reports):
         if idx == 0:
             continue
-        else:
-            if report == reports[idx - 1]:
-                failed_at.append(idx)
-                
-            if abs(report - reports[idx - 1]) > 3:
-                failed_at.append(idx)
-            if direction == 1 and report < reports[idx - 1]:
-                failed_at.append(idx)
-            if direction == -1 and report > reports[idx - 1]:
-                failed_at.append(idx)
+
+        if report == reports[idx - 1]:
+            failed_at.append(idx)
+
+        if abs(report - reports[idx - 1]) > 3:
+            failed_at.append(idx)
+        if direction == 1 and report < reports[idx - 1]:
+            failed_at.append(idx)
+        if direction == -1 and report > reports[idx - 1]:
+            failed_at.append(idx)
 
     safe = len(failed_at) == 0
 
@@ -63,5 +63,5 @@ def is_safe(reports: List[int]) -> bool:
 if __name__ == "__main__":
     f = open(f"{os.getcwd()}/day2/inputs/main.txt", "r")
     lines = f.readlines()
-    # print("Part 1: ", part1(lines))
+    print("Part 1: ", part1(lines))
     print("Part 2: ", part2(lines))
