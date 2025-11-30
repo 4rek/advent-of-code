@@ -1,0 +1,31 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Advent of Code 2025",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npx jest --verbose",
+    "test:watch": "npx jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/4rek/advent-of-code.git"
+  },
+  "keywords": [
+    "AOC",
+    "Advent",
+    "of",
+    "Code"
+  ],
+  "author": "4rek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4rek/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/4rek/advent-of-code#readme",
+  "devDependencies": {
+    "@jest/globals": "^29.3.1",
+    "@types/node": "^18.11.10",
+    "ts-jest": "^29.0.3"
+  }
+}
