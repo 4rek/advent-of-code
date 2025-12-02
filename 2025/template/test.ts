@@ -3,7 +3,7 @@ import { partOne, partTwo } from './solution';
 
 import { readFile } from 'fs/promises';
 
-describe('Day 1', () => {
+describe.skip('Template', () => {
 
   test('Part one - test data', async () => {
     const input: string = await readFile(__dirname + '/test-input.txt', 'utf8');
