@@ -1,7 +1,7 @@
 export function partOne(data: string[]): number {
-  return 1
+	return 1;
 }
 
 export function partTwo(data: string[]): number {
-  return 2
+	return 2;
 }
